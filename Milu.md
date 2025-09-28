@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Proyecto: Diagnóstico rápido de TB resistente</title>
+  <style>
+    :root{--bg:#f6f8fb;--card:#ffffff;--accent:#1f6feb;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;background:linear-gradient(180deg,var(--bg),#ffffff 80%);color:#0f172a}
+    .container{max-width:980px;margin:32px auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .full{grid-column:1/-1}
+    ul{margin:8px 0 0;padding-left:18px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:600;font-size:13px}
+    .ods{display:flex;gap:8px;flex-wrap:wrap}
+    .ods .item{display:flex;flex-direction:column;align-items:flex-start;padding:10px;border-radius:8px;background:#f8fafc;border:1px solid #e6eef9}
+    h3{margin:0 0 8px}
+    .tech-list{display:flex;flex-direction:column;gap:8px}
+    footer{margin-top:22px;color:var(--muted);font-size:13px}
+    .controls{display:flex;gap:8px;align-items:center}
+    button{background:var(--accent);border:none;color:white;padding:10px 12px;border-radius:10px;font-weight:600;cursor:pointer}
+    button.secondary{background:#e6eef9;color:var(--accent)}
+    pre{background:#0f172a;color:#e6eef9;padding:12px;border-radius:8px;overflow:auto}
+    @media (max-width:800px){.grid{grid-template-columns:1fr}.logo{width:60px;height:60px}}
+    @media print{body{background:white}header .logo{display:none}.controls{display:none}}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">TB</div>
+      <div>
+        <h1>Diagnóstico rápido de tuberculosis resistente a rifampicina</h1>
+        <p class="lead">Proyecto orientado a desarrollar una prueba rápida, económica y sensible para detectar resistencia a rifampicina usando elementos biotecnológicos y señales fluorescentes.</p>
+      </div>
+    </header>
+
+    <section style="margin-top:18px" class="grid">
+      <article class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div>
+            <div class="badge">Área de estudio</div>
+            <div style="margin-top:8px;font-weight:700">ODS relevantes</div>
+            <div class="ods" style="margin-top:8px">
+              <div class="item"><strong>ODS 3</strong><span style="font-size:13px;color:var(--muted)">Salud y bienestar</span></div>
+              <div class="item"><strong>ODS 10</strong><span style="font-size:13px;color:var(--muted)">Reducción de desigualdades</span></div>
+            </div>
+          </div>
+          <div style="text-align:right;color:var(--muted);font-size:13px">Proyecto educativo • Bolivia</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Planteamiento del problema</h3>
+        <p style="color:var(--muted);margin:6px 0 0">La TB resistente a medicamentos es común en Bolivia, especialmente en zonas rurales y ciudades grandes. El diagnóstico actual es lento y caro, lo que aumenta el contagio y retrasa el tratamiento.</p>
+      </article>
+
+      <article class="card full">
+        <h3>Muestras y partes biológicas (ejemplos)</h3>
+        <p style="color:var(--muted);margin:6px 0 12px">Elementos biológicos que se pueden utilizar en el prototipo experimental:</p>
+        <ul>
+          <li>Promotor sensible a rifampicina</li>
+          <li>Gen GFP (proteína fluorescente) para señal visual</li>
+          <li>Plásmido pBBR1 con resistencia a kanamicina (vector de clonación)</li>
+          <li>Sonda para el gen rpoB (detección de mutaciones asociadas a resistencia)</li>
+          <li>Controles positivos y negativos (cepas conocidas)</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Técnicas moleculares a emplear</h3>
+        <div class="tech-list">
+          <div>• PCR (amplificación de regiones específicas del gen rpoB)</div>
+          <div>• Clonación en plásmido para construir el biosensor</div>
+          <div>• Transformación en bacterias (ensayos de expresión)</div>
+          <div>• Secuenciación (verificación de mutaciones en rpoB)</div>
+          <div>• Ensayos de fluorescencia (detección rápida mediante GFP)</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Resultados esperados</h3>
+        <ul>
+          <li>Bacterias que brillen verde si detectan resistencia a rifampicina.</li>
+          <li>Diagnóstico funcional en &lt; 4 horas.</li>
+          <li>Alta sensibilidad y especificidad, con bajo costo por prueba.</li>
+          <li>Fácil implementación en entornos rurales con equipamiento básico.</li>
+        </ul>
+      </article>
+
+      <article class="card full">
+        <h3>Resumen ejecutivo (lista para entregar)</h3>
+        <ol>
+          <li>Objetivo: Desarrollar una prueba rápida y económica para detectar resistencia a rifampicina en <4 horas.</li>
+          <li>Impacto: Reducir el tiempo de diagnóstico, disminuir contagios y facilitar decisiones clínicas más tempranas.</li>
+          <li>Recursos: reactivos PCR, kits de clonación, plásmidos, incubadores simples, lector de fluorescencia o lámpara azul/verde.</li>
+          <li>Etapas: diseño de sondas → construcción del plásmido sensor → validación con controles → ensayo en muestras clínicas → optimización y escala.</li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h3>Materiales sugeridos</h3>
+        <ul>
+          <li>Reactivos para PCR (Taq o Q5), primers específicos para rpoB.</li>
+          <li>Kits de clonación y pBBR1 (vector), enzimas de restricción / ligasa.</li>
+          <li>Placas de cultivo, medio LB, kanamicina.</li>
+          <li>Control positivo (cepa resistente conocida) y control negativo.</li>
+          <li>Lector de fluorescencia portátil o lámpara de transiluminación azul/verde.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Notas de seguridad y bioética</h3>
+        <p style="color:var(--muted)">Cualquier trabajo con patógenos o material clínico requiere aprobaciones institucionales, condiciones de bioseguridad (al menos BSL-2/BLS-3 según la manipulación), capacitación del personal y manejo responsable de datos y muestras. Este proyecto debe concebirse como un prototipo de análisis y validación; no debe implementarse clínicamente sin pruebas regulatorias y supervisión profesional.</p>
+      </article>
+
+    </section>
+
+    <div style="display:flex;gap:10px;align-items:center;margin-top:18px">
+      <div class="controls">
+        <button id="downloadBtn">Descargar HTML</button>
+        <button class="secondary" id="printBtn">Imprimir</button>
+      </div>
+    </div>
+
+    <footer>
+      <div>Creado automáticamente — adapta el contenido antes de usar en presentaciones o documentos oficiales.</div>
+    </footer>
+  </main>
+
+  <script>
+    // Descargar la página como archivo HTML
+    document.getElementById('downloadBtn').addEventListener('click',function(){
+      const blob=new Blob([document.documentElement.outerHTML],{type:'text/html'});
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');a.href=url;a.download='diagnostico_tb_resistente.html';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+    });
+    document.getElementById('printBtn').addEventListener('click',function(){window.print();});
+  </script>
+</body>
+</html>
