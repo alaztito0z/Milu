@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-       <h3>BioHealth</h3>
   <title>Proyecto: Diagnóstico rápido de TB resistente</title>
   <style>
     :root{--bg:#f6f8fb;--card:#ffffff;--accent:#1f6feb;--muted:#6b7280}
@@ -28,6 +27,7 @@
     button{background:var(--accent);border:none;color:white;padding:10px 12px;border-radius:10px;font-weight:600;cursor:pointer}
     button.secondary{background:#e6eef9;color:var(--accent)}
     pre{background:#0f172a;color:#e6eef9;padding:12px;border-radius:8px;overflow:auto}
+    img{max-width:100%;border-radius:12px}
     @media (max-width:800px){.grid{grid-template-columns:1fr}.logo{width:60px;height:60px}}
     @media print{body{background:white}header .logo{display:none}.controls{display:none}}
   </style>
@@ -37,6 +37,7 @@
     <header>
       <div class="logo">TB</div>
       <div>
+        <h3 style="margin:0">BioHealth</h3>
         <h1>Diagnóstico rápido de tuberculosis resistente a rifampicina</h1>
         <p class="lead">Proyecto orientado a desarrollar una prueba rápida, económica y sensible para detectar resistencia a rifampicina usando elementos biotecnológicos y señales fluorescentes.</p>
       </div>
@@ -97,7 +98,7 @@
 
       <article class="card full">
         <ol>
-          <li>Objetivo: Desarrollar una prueba rápida y económica para detectar resistencia a rifampicina en <4 horas.</li>
+          <li>Objetivo: Desarrollar una prueba rápida y económica para detectar resistencia a rifampicina en &lt;4 horas.</li>
           <li>Impacto: Reducir el tiempo de diagnóstico, disminuir contagios y facilitar decisiones clínicas más tempranas.</li>
           <li>Recursos: reactivos PCR, kits de clonación, plásmidos, incubadores simples, lector de fluorescencia o lámpara azul/verde.</li>
           <li>Etapas: diseño de sondas → construcción del plásmido sensor → validación con controles → ensayo en muestras clínicas → optimización y escala.</li>
@@ -115,9 +116,11 @@
         </ul>
       </article>
 
-      <article class="card">
-        <h3>Notas de seguridad y bioética</h3>
-        <p style="color:var(--muted)">Cualquier trabajo con patógenos o material clínico requiere aprobaciones institucionales, condiciones de bioseguridad (al menos BSL-2/BLS-3 según la manipulación), capacitación del personal y manejo responsable de datos y muestras. Este proyecto debe concebirse como un prototipo de análisis y validación; no debe implementarse clínicamente sin pruebas regulatorias y supervisión profesional.</p>
+      <!-- Nueva sección con imágenes en vez de bioética -->
+      <article class="card full">
+        <h3>Imágenes del proyecto</h3>
+        <img src="I1.jpg" alt="Imagen 1 del proyecto">
+        <img src="I2.jpg" alt="Imagen 2 del proyecto" style="margin-top:12px">
       </article>
 
     </section>
@@ -144,4 +147,4 @@
     document.getElementById('printBtn').addEventListener('click',function(){window.print();});
   </script>
 </body>
-</html>
+          </html>
