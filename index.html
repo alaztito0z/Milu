@@ -10,7 +10,7 @@
     body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;background:linear-gradient(180deg,var(--bg),#ffffff 80%);color:#0f172a}
     .container{max-width:980px;margin:32px auto;padding:24px}
     header{display:flex;gap:16px;align-items:center}
-    .logo{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    .logo{width:72px;height:72px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center}
     h1{margin:0;font-size:28px}
     p.lead{color:var(--muted);margin:6px 0 18px}
     .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
@@ -28,8 +28,7 @@
     button.secondary{background:#e6eef9;color:var(--accent)}
     pre{background:#0f172a;color:#e6eef9;padding:12px;border-radius:8px;overflow:auto}
     img{max-width:100%;border-radius:12px;display:block}
-    /* nuevo: grid para las imágenes dentro de la tarjeta (lado a lado en ancho, apiladas en móvil) */
-    .bio-images { display: grid; grid-template-columns: 1fr 1fr; gap:12px; align-items:start; }
+    .bio-images{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
     @media (max-width:800px){.grid{grid-template-columns:1fr}.logo{width:60px;height:60px}.bio-images{grid-template-columns:1fr}}
     @media print{body{background:white}header .logo{display:none}.controls{display:none}}
   </style>
@@ -37,9 +36,11 @@
 <body>
   <main class="container">
     <header>
-      <div class="logo">TB</div>
+      <!-- Logo circular con I3 -->
+      <div class="logo">
+        <img src="I3.jpg" alt="Foto del equipo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+      </div>
       <div>
-        <!-- BioHealth colocado en el encabezado antes del título, manteniendo la estructura original -->
         <h3 style="margin:0">BioHealth</h3>
         <h1>Diagnóstico rápido de tuberculosis resistente a rifampicina</h1>
         <p class="lead">Proyecto orientado a desarrollar una prueba rápida, económica y sensible para detectar resistencia a rifampicina usando elementos biotecnológicos y señales fluorescentes.</p>
@@ -119,8 +120,7 @@
         </ul>
       </article>
 
-      <!-- REEMPLAZADA la tarjeta original "Notas de seguridad y bioética" POR LAS IMÁGENES,
-           manteniendo el mismo título y la misma posición en la grilla (no full). -->
+      <!-- Imágenes I1 e I2 en lugar de notas de bioética -->
       <article class="card">
         <h3>Notas de seguridad y bioética</h3>
         <div class="bio-images" style="margin-top:10px">
@@ -144,7 +144,6 @@
   </main>
 
   <script>
-    // Descargar la página como archivo HTML
     document.getElementById('downloadBtn').addEventListener('click',function(){
       const blob=new Blob([document.documentElement.outerHTML],{type:'text/html'});
       const url=URL.createObjectURL(blob);
